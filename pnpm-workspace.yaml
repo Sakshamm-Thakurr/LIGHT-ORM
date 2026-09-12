@@ -1,0 +1,7 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+  - "apps/todo-app/frontend"
+
+allowBuilds:
+  esbuild: true

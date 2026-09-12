@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+*.log
+.DS_Store
+coverage
+.turbo
+*.tgz
+frontend/dist
+apps/todo-app/frontend/dist

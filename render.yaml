@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: todo-api
+    runtime: node
+    plan: free
+    rootDir: .
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @sakshamthakur/light-orm build && pnpm --filter todo-api build
+    startCommand: node apps/todo-app/dist/server.js
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: PORT
+        value: 4000
