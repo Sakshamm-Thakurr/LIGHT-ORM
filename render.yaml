@@ -4,7 +4,7 @@ services:
     runtime: node
     plan: free
     rootDir: .
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm --filter @sakshamthakur/light-orm build && pnpm --filter todo-api build
+    buildCommand: npx pnpm@12.4.1 install --frozen-lockfile && npx pnpm@12.4.1 --filter @sakshamthakur/light-orm build && npx pnpm@12.4.1 --filter todo-api build
     startCommand: node apps/todo-app/dist/server.js
     envVars:
       - key: DATABASE_URL
